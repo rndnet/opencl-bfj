@@ -9,6 +9,5 @@ if [ ! -f ./files/${AMD_DRV} ]; then
     wget ${download} --referer ${referer}  -O files/${AMD_DRV}
 fi
 
-exit
-
-podman build -t docker.io/rndnet/opencl-bfj:latest -f Dockerfile
+podman build -t docker.io/rndnet/opencl-bfj:latest --no-cache -f Dockerfile
+#podman build -t docker.io/rndnet/opencl-bfj:latest -f Dockerfile
